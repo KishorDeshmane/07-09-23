@@ -1,0 +1,726 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Kishor_Automation_Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Kishor_Automation_Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 7, 2023 07:50:15 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 7, 2023 07:50:15 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 7, 2023 07:50:35 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>45</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Validate executive all user page functionality":15.395
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Smoke</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Executive_all_user_page</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>Shield</td>
+</tr>
+<tr>
+<td>user</td>
+<td>QA_Automation_Tester</td>
+</tr>
+<tr>
+<td>build</td>
+<td>Shield_1</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 1,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 45,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@Executive_all_user_page</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate executive all user page functionality</p>
+            <p class="text-sm">
+              <span>7:50:19 PM</span> / <span>00:00:15:395</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate executive all user page functionality</h5>
+<span class='badge badge-success'>09.07.2023 7:50:19 PM</span>
+<span class='badge badge-danger'>09.07.2023 7:50:35 PM</span>
+<span class='badge badge-default'>00:00:15:395</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate that elements are present with executive all users page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_executive_user_is_on_the_users_all_users_page_as_expected_page_title(java.lang.String)">
+                <span>Given Verify that executive user is on the all users page as expected page title "Shield"</span>
+      <div>verify_that_executive_user_is_on_the_users_all_users_page_as_expected_page_title
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_executive_user_all_users_headers_text_should_be_displayed_from_the_all_users_page()">
+                <span>Then Verify that executive user all users headers text should be displayed from the all users page</span>
+      <div>verify_that_executive_user_all_users_headers_text_should_be_displayed_from_the_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_executive_user_all_users_breadcrum_should_be_displayed_from_all_user_page()">
+                <span>Then Verify that breadcrum should be displayed from executive all users page</span>
+      <div>verify_that_executive_user_all_users_breadcrum_should_be_displayed_from_all_user_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_breadcrum_dashboard_button_should_be_displayed_from_executive_user_all_users_page()">
+                <span>Then Verify that breadcrum dashboard button should be displayed from executive all users page</span>
+      <div>verify_that_breadcrum_dashboard_button_should_be_displayed_from_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_breadcrum_dashboard_button_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that breadcrum dashboard button should be clickable from the executive all users page</span>
+      <div>verify_that_breadcrum_dashboard_button_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_breadcrum_users_text_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that breadcrum users text should be displayed from the executive all users page</span>
+      <div>verify_that_breadcrum_users_text_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_search_button_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that search button should be displayed from the executive all users page</span>
+      <div>verify_that_search_button_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_search_button_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that search button should be clickable from the executive all users page</span>
+      <div>verify_that_search_button_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.Verify_that_search_button_should_be_able_mouse_hover_from_executive_user_all_users_page()">
+                <span>Then Verify that search button should be able mouse hover from executive all users page</span>
+      <div>Verify_that_search_button_should_be_able_mouse_hover_from_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_search_userfield_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that search userfield should be clickable from the executive all users page</span>
+      <div>verify_that_search_userfield_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_search_userfield_placeholder_value_should_be_from_executive_user_all_users_page(java.lang.String)">
+                <span>Then Verify that search userfield placeholder value should be "Search by name, email or mobile..." from executive all users page</span>
+      <div>verify_that_search_userfield_placeholder_value_should_be_from_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_name_up_down_arrow_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list name up-down arrow should be clickable from the executive all users page</span>
+      <div>verify_that_thread_column_list_name_up_down_arrow_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_email_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list email up-down arrows should be clickable from the executive all users page</span>
+      <div>verify_that_thread_column_list_email_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_mobile_number_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list mobile number up-down arrows should be clickable from the executive all users page</span>
+      <div>verify_that_thread_column_list_mobile_number_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.Verify_that_thread_column_list_type_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list type up-down arrows should be clickable from the executive all users page</span>
+      <div>Verify_that_thread_column_list_type_up_down_arrows_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_status_up_down_arrow_should_be_clickabale_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list status up-down arrow should be clickable from the executive all users page</span>
+      <div>verify_that_thread_column_list_status_up_down_arrow_should_be_clickabale_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_name_up_down_arrow_should_be_displayed_from_the_super_executive_user_all_users_page()">
+                <span>Then Verify that thread column list name up-down arrow should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_name_up_down_arrow_should_be_displayed_from_the_super_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_email_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list email up-down arrows should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_email_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_mobile_number_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list mobile number up-down arrows should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_mobile_number_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.Verify_that_thread_column_list_type_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list type up-down arrows should be displayed from the executive all users page</span>
+      <div>Verify_that_thread_column_list_type_up_down_arrows_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_status_up_down_arrow_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list status up-down arrow should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_status_up_down_arrow_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_list_action_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column list action should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_list_action_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_name_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column name should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_name_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_email_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column email should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_email_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.Verify_that_thread_column_type_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column type should be displayed from the executive all users page</span>
+      <div>Verify_that_thread_column_type_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_mobile_number_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column mobile number should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_mobile_number_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_thread_column_status_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that thread column status should be displayed from the executive all users page</span>
+      <div>verify_that_thread_column_status_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_options_3_dots_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions options 3 dots should be clickable from the executive all users page</span>
+      <div>verify_that_actions_options_3_dots_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_options_3_dots_should_be_able_to_mouse_hover_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions options 3 dots should be able to mouse hover from the executive all users page</span>
+      <div>verify_that_actions_options_3_dots_should_be_able_to_mouse_hover_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_option_edit_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions option edit should be clickable from the executive all users page</span>
+      <div>verify_that_actions_option_edit_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_option_change_status_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions option change status should be clickable from the executive all users page</span>
+      <div>verify_that_actions_option_change_status_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_option_resend_email_verification_link_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions option resend email verification link should be clickable from the executive all users page</span>
+      <div>verify_that_actions_option_resend_email_verification_link_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_actions_option_change_password_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that actions option change password should be clickable from the executive all users page</span>
+      <div>verify_that_actions_option_change_password_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_left_arrow_should_be_displayed_from_the_super_user_all_user_all_users_page()">
+                <span>Then Verify that pagination left arrow should be displayed from the executive all users page</span>
+      <div>verify_that_pagination_left_arrow_should_be_displayed_from_the_super_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_left_arrow_should_be_clickable_from_the_executive_user_all_user_all_users_page()">
+                <span>Then Verify that pagination left arrow should be clickable from the executive all users page</span>
+      <div>verify_that_pagination_left_arrow_should_be_clickable_from_the_executive_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_left_arrow_should_be_able_to_mouse_hover_from_the_executive_user_all_user_all_users_page()">
+                <span>Then Verify that pagination left arrow should be able to mouse hover from executive all users page</span>
+      <div>verify_that_pagination_left_arrow_should_be_able_to_mouse_hover_from_the_executive_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_numbers_1_should_be_selected_from_the_executive_user_all_users_page()">
+                <span>Then Verify that pagination numbers 1 should be selected from the executive all users page</span>
+      <div>verify_that_pagination_numbers_1_should_be_selected_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_numbers_should_be_displayed_from_the_executive_user_all_users_page()">
+                <span>Then Verify that pagination numbers should be displayed from the executive all users page</span>
+      <div>verify_that_pagination_numbers_should_be_displayed_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_numbers_should_be_clickable_from_the_executive_user_all_users_page()">
+                <span>Then Verify that pagination numbers should be clickable from the executive all users page</span>
+      <div>verify_that_pagination_numbers_should_be_clickable_from_the_executive_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_numbers_should_be_able_to_mouse_hover_from_the_executive_user_all_user_page()">
+                <span>Then Verify that pagination numbers should be able to mouse hover from the executive all users page</span>
+      <div>verify_that_pagination_numbers_should_be_able_to_mouse_hover_from_the_executive_user_all_user_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_right_arrow_should_be_displayed_from_the_executive_user_all_user_all_users_page()">
+                <span>Then Verify that pagination right arrow should be displayed from the executive all users page</span>
+      <div>verify_that_pagination_right_arrow_should_be_displayed_from_the_executive_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_right_arrow_should_be_clickable_from_the_executive_user_all_user_all_users_page()">
+                <span>Then Verify that pagination right arrow should be clickable from the executive all users page</span>
+      <div>verify_that_pagination_right_arrow_should_be_clickable_from_the_executive_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_right_arrow_should_be_able_to_mouse_hover_from_the_executive_user_all_user_all_users_page()">
+                <span>Then Verify that pagination right arrow should be able to mouse hover from the executive all users page</span>
+      <div>verify_that_pagination_right_arrow_should_be_able_to_mouse_hover_from_the_executive_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.executive.D0301_executive_users_all_users_page.verify_that_pagination_count_size_should_be_from_the_super_user_all_user_all_users_page(java.lang.Integer)">
+                <span>Then Verify that pagination count size should be 10 from the executive all users page</span>
+      <div>verify_that_pagination_count_size_should_be_from_the_super_user_all_user_all_users_page
+      </div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:50:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Validate that elements are present with executive all users page</a>
+<div class="">
+<span class="badge badge-default">Validate executive all user page functionality.Validate that elements are present with executive all users page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Executive_all_user_page</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Executive_all_user_page</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:50:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Validate that elements are present with executive all users page</a>
+<div class="">
+<span class="badge badge-default">Validate executive all user page functionality.Validate that elements are present with executive all users page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
